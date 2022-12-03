@@ -1,0 +1,121 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{MM}-{####}",
+ "creation": "2022-12-03 12:24:00.992416",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "member_name",
+  "plan",
+  "locker_opted",
+  "locker",
+  "locker_no",
+  "amended_from",
+  "opted_trainer",
+  "trainer_name",
+  "from_date",
+  "to_date",
+  "diff_days"
+ ],
+ "fields": [
+  {
+   "fieldname": "member_name",
+   "fieldtype": "Link",
+   "label": "Member Name",
+   "options": "Gym Member"
+  },
+  {
+   "fieldname": "plan",
+   "fieldtype": "Link",
+   "label": "Plan",
+   "options": "Gym Plans"
+  },
+  {
+   "default": "0",
+   "fieldname": "locker_opted",
+   "fieldtype": "Check",
+   "label": "locker opted"
+  },
+  {
+   "depends_on": "eval:doc.locker_opted == 1",
+   "fieldname": "locker",
+   "fieldtype": "Link",
+   "label": "Locker",
+   "mandatory_depends_on": "eval:doc.locker_opted == 1",
+   "options": "Gym Locker"
+  },
+  {
+   "fetch_from": "locker.locker_no",
+   "fieldname": "locker_no",
+   "fieldtype": "Data",
+   "label": "Locker No"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Gym Membership",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "opted_trainer",
+   "fieldtype": "Check",
+   "label": "opted trainer"
+  },
+  {
+   "depends_on": "eval:doc.opted_trainer == 1",
+   "fieldname": "trainer_name",
+   "fieldtype": "Link",
+   "label": "Trainer name",
+   "mandatory_depends_on": "eval:doc.opted_trainer == 1",
+   "options": "Gym Trainer"
+  },
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "from date"
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "to date"
+  },
+  {
+   "fieldname": "diff_days",
+   "fieldtype": "Data",
+   "label": "remaining days"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2022-12-03 15:09:08.569384",
+ "modified_by": "Administrator",
+ "module": "Gym Management",
+ "name": "Gym Membership",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
