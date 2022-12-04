@@ -18,7 +18,8 @@
   "trainer_name",
   "from_date",
   "to_date",
-  "diff_days"
+  "diff_days",
+  "status"
  ],
  "fields": [
   {
@@ -90,12 +91,20 @@
    "fieldname": "diff_days",
    "fieldtype": "Data",
    "label": "remaining days"
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "status",
+   "options": "\nActive\nExpired",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2022-12-03 15:09:08.569384",
+ "modified": "2022-12-04 09:59:48.831685",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gym Membership",
@@ -117,5 +126,14 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [
+  {
+   "color": "Green",
+   "title": "Active"
+  },
+  {
+   "color": "Red",
+   "title": "Expired"
+  }
+ ]
 }

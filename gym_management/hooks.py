@@ -185,3 +185,7 @@ app_license = "MIT"
 # auth_hooks = [
 #	"gym_management.auth.validate"
 # ]
+fixtures = [
+    # export all records from the Category table
+    "Web Page"
+]

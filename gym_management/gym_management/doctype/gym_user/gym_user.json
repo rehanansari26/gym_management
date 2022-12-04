@@ -1,35 +1,36 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:type",
- "creation": "2022-12-03 12:16:01.707412",
+ "autoname": "field:user_email",
+ "creation": "2022-12-04 09:21:54.119663",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "type",
-  "price"
+  "user_email",
+  "member"
  ],
  "fields": [
   {
-   "fieldname": "type",
+   "fieldname": "user_email",
    "fieldtype": "Data",
-   "label": "type",
+   "label": "user email",
    "unique": 1
   },
   {
-   "fieldname": "price",
-   "fieldtype": "Currency",
-   "label": "Price"
+   "fieldname": "member",
+   "fieldtype": "Link",
+   "label": "Member",
+   "options": "Gym Member"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-12-04 12:34:32.971008",
+ "modified": "2022-12-04 09:32:53.213396",
  "modified_by": "Administrator",
  "module": "Gym Management",
- "name": "Gym Plans",
+ "name": "Gym User",
  "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
