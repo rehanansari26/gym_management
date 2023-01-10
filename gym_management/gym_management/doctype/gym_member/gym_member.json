@@ -1,7 +1,6 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{member_name}-{##}",
  "creation": "2022-12-03 12:20:41.543873",
  "default_view": "List",
  "doctype": "DocType",
@@ -11,6 +10,7 @@
   "member_name",
   "gender",
   "pro_image",
+  "column_break_4",
   "email",
   "phone",
   "status"
@@ -30,36 +30,41 @@
   {
    "fieldname": "pro_image",
    "fieldtype": "Attach Image",
-   "label": "pro image"
+   "label": "pro image",
+   "read_only": 1
   },
   {
    "fieldname": "email",
    "fieldtype": "Data",
-   "label": "email",
+   "label": "Email",
    "options": "Email",
    "unique": 1
   },
   {
    "fieldname": "phone",
    "fieldtype": "Phone",
-   "label": "phone"
+   "label": "Phone"
   },
   {
    "default": "Inactive",
    "fieldname": "status",
    "fieldtype": "Select",
-   "label": "status",
-   "options": "\nActive\nInactive"
+   "label": "Status",
+   "options": "\nActive\nInactive",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
   }
  ],
  "image_field": "pro_image",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-12-04 09:35:49.259873",
+ "modified": "2023-01-09 17:03:48.326051",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gym Member",
- "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
@@ -75,6 +80,7 @@
    "write": 1
   }
  ],
+ "search_fields": "member_name",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []

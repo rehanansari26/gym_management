@@ -16,7 +16,8 @@
   "friday",
   "saturday",
   "sunday",
-  "route"
+  "route",
+  "published"
  ],
  "fields": [
   {
@@ -71,11 +72,19 @@
    "fieldname": "route",
    "fieldtype": "Data",
    "label": "route"
+  },
+  {
+   "default": "0",
+   "fieldname": "published",
+   "fieldtype": "Check",
+   "label": "published"
   }
  ],
+ "has_web_view": 1,
  "index_web_pages_for_search": 1,
+ "is_published_field": "published",
  "links": [],
- "modified": "2022-12-03 13:57:42.183759",
+ "modified": "2023-01-09 15:02:20.779034",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gym Workout Plan",
@@ -95,7 +104,7 @@
    "write": 1
   }
  ],
- "route": "test",
+ "route": "workout-plan",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []

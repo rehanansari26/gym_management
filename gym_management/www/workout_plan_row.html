@@ -1,0 +1,53 @@
+<div class="py-8 row">
+
+    {% set sunday = frappe.get_all('Gym Workout Plan Exercise', filters={'parent': args.get('name'),'parentfield':'sunday'}, fields=['workout_name']) %}
+    {% set monday = frappe.get_all('Gym Workout Plan Exercise', filters={'parent': args.get('name'),'parentfield':'monday'}, fields=['workout_name']) %}
+    {% set tuesday = frappe.get_all('Gym Workout Plan Exercise', filters={'parent': args.get('name'),'parentfield':'monday'}, fields=['workout_name']) %}
+    {% set wednesday = frappe.get_all('Gym Workout Plan Exercise', filters={'parent': args.get('name'),'parentfield':'monday'}, fields=['workout_name']) %}
+    {% set thursday = frappe.get_all('Gym Workout Plan Exercise', filters={'parent': args.get('name'),'parentfield':'monday'}, fields=['workout_name']) %}
+    {% set friday = frappe.get_all('Gym Workout Plan Exercise', filters={'parent': args.get('name'),'parentfield':'monday'}, fields=['workout_name']) %}
+    {% set saturday = frappe.get_all('Gym Workout Plan Exercise', filters={'parent': args.get('name'),'parentfield':'monday'}, fields=['workout_name']) %}
+
+
+    <p><b>Sunday</b></p>
+
+    {% for sun in sunday %}
+        <p>{{ sun.workout_name}}</p>
+    {% endfor %}
+
+    <p><b>Monday</b></p>
+
+    {% for mon in monday %}
+        <p>{{ mon.workout_name}}</p>
+    {% endfor %}
+
+    <p><b>Tuesday</b></p>
+
+    {% for tue in tuesday %}
+        <p>{{ tue.workout_name}}</p>
+    {% endfor %}
+
+    <p><b>wednesday</b></p>
+
+    {% for wed in wednesday %}
+        <p>{{ wed.workout_name}}</p>
+    {% endfor %}
+
+    <p><b>thursday</b></p>
+
+    {% for thur in thursday %}
+        <p>{{ thur.workout_name}}</p>
+    {% endfor %}
+
+    <p><b>friday</b></p>
+
+    {% for fri in friday %}
+        <p>{{ fri.workout_name}}</p>
+    {% endfor %}
+
+    <p><b>saturday</b></p>
+
+    {% for sat in saturday %}
+        <p>{{ sat.workout_name}}</p>
+    {% endfor %}
+</div>

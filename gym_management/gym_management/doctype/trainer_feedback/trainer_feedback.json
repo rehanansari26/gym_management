@@ -1,49 +1,41 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:plan",
- "creation": "2022-12-03 12:16:01.707412",
+ "creation": "2023-01-09 16:17:40.919904",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "plan",
-  "month",
-  "rate",
-  "total"
+  "gym_mmeber",
+  "trainer",
+  "rating"
  ],
  "fields": [
   {
-   "fieldname": "plan",
-   "fieldtype": "Data",
-   "label": "plan",
-   "unique": 1
+   "fieldname": "gym_mmeber",
+   "fieldtype": "Link",
+   "label": "Gym Mmeber",
+   "options": "Gym Member"
   },
   {
-   "fieldname": "month",
-   "fieldtype": "Int",
-   "label": "No of Month"
+   "fieldname": "trainer",
+   "fieldtype": "Link",
+   "label": "Trainer",
+   "options": "Gym Trainer"
   },
   {
-   "fieldname": "rate",
-   "fieldtype": "Float",
-   "label": "Monthly"
-  },
-  {
-   "fieldname": "total",
-   "fieldtype": "Float",
-   "label": "total",
-   "read_only": 1
+   "fieldname": "rating",
+   "fieldtype": "Rating",
+   "label": "rating"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-01-09 17:31:30.750942",
+ "modified": "2023-01-09 16:17:40.919904",
  "modified_by": "Administrator",
  "module": "Gym Management",
- "name": "Gym Plans",
- "naming_rule": "By fieldname",
+ "name": "Trainer Feedback",
  "owner": "Administrator",
  "permissions": [
   {

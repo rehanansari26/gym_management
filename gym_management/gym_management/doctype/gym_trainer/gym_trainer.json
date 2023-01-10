@@ -1,7 +1,6 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{trainer_name}-{##}",
  "creation": "2022-12-03 12:48:38.846533",
  "default_view": "List",
  "doctype": "DocType",
@@ -9,10 +8,12 @@
  "engine": "InnoDB",
  "field_order": [
   "trainer_name",
-  "specialisation",
-  "total_exp",
   "email",
-  "phone"
+  "phone",
+  "total_exp",
+  "column_break_5",
+  "specialisation",
+  "workout_plan"
  ],
  "fields": [
   {
@@ -29,27 +30,36 @@
   {
    "fieldname": "total_exp",
    "fieldtype": "Data",
-   "label": "total_exp"
+   "label": "Total Exp"
   },
   {
    "fieldname": "email",
    "fieldtype": "Data",
-   "label": "email",
+   "label": "Email",
    "options": "Email"
   },
   {
    "fieldname": "phone",
    "fieldtype": "Phone",
-   "label": "phone"
+   "label": "Phone"
+  },
+  {
+   "fieldname": "workout_plan",
+   "fieldtype": "Link",
+   "label": "workout plan",
+   "options": "Gym Workout Plan"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-12-03 15:13:35.579582",
+ "modified": "2023-01-09 18:10:40.007304",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gym Trainer",
- "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
