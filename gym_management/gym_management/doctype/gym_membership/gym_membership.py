@@ -7,4 +7,7 @@ from frappe.utils import date_diff
 
 class GymMembership(Document):
 	def before_save(doc):
+		doc.age_calculation()
+
+	def age_calculation(doc):
 		doc.diff_days = date_diff(doc.to_date, frappe.utils.nowdate())
